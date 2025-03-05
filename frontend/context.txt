@@ -1,0 +1,167 @@
+Frontend Architecture for EventXpert
+
+1. Technology Stack:
+- React 18+ 
+- Vite as build tool
+- TailwindCSS for styling
+- React Query for server state management
+- Zustand for client state management
+- React Router v6 for routing
+- Axios for API calls
+- React Hook Form for form handling
+- Zod for form validation
+- React Icons for icons
+- React Hot Toast for notifications
+
+2. Directory Structure:
+/src
+  /components
+    /common           # Reusable UI components
+      Button.jsx
+      Input.jsx
+      Card.jsx
+      Modal.jsx
+      Loading.jsx
+    /layout          # Layout components
+      Header.jsx
+      Footer.jsx
+      Sidebar.jsx
+      MainLayout.jsx
+    /features        # Feature-specific components
+      /auth
+      /events
+      /bookings
+      /users
+      /venues
+  
+  /pages             # Page components
+    /auth
+      Login.jsx
+      Register.jsx
+    /dashboard
+      Dashboard.jsx
+    /events
+      EventList.jsx
+      EventDetails.jsx
+      CreateEvent.jsx
+      EditEvent.jsx
+    /bookings
+      BookingList.jsx
+      BookingDetails.jsx
+    /venues
+      VenueList.jsx
+      VenueDetails.jsx
+    /profile
+      UserProfile.jsx
+  
+  /hooks             # Custom hooks
+    useAuth.js
+    useEvents.js
+    useBookings.js
+    useVenues.js
+  
+  /services          # API services
+    api.js
+    auth.service.js
+    events.service.js
+    bookings.service.js
+    venues.service.js
+  
+  /store             # State management
+    auth.store.js
+    events.store.js
+    ui.store.js
+  
+  /utils             # Utility functions
+    date.utils.js
+    format.utils.js
+    validation.utils.js
+  
+  /types             # TypeScript types/interfaces
+    auth.types.js
+    events.types.js
+    bookings.types.js
+    venues.types.js
+  
+  /constants         # Constants and configurations
+    routes.js
+    api.constants.js
+    theme.constants.js
+
+3. Key Features:
+- Authentication & Authorization
+  - Login/Register
+  - JWT token management
+  - Protected routes
+  - Role-based access control
+
+- Event Management
+  - Create, Read, Update, Delete events
+  - Event categories
+  - Event search and filtering
+  - Event details with rich media
+  - Event sharing
+
+- Booking System
+  - Ticket booking
+  - Multiple ticket types
+  - Payment integration
+  - Booking confirmation
+  - E-ticket generation
+
+- Venue Management
+  - Venue listings
+  - Venue details
+  - Venue availability
+  - Venue search and filtering
+
+- User Management
+  - User profiles
+  - Booking history
+  - Favorite events
+  - User settings
+
+4. UI/UX Considerations:
+- Responsive design for all screen sizes
+- Dark/Light theme support
+- Loading states and skeleton loaders
+- Error boundaries
+- Form validation feedback
+- Toast notifications
+- Infinite scrolling for lists
+- Search with debouncing
+- Optimistic updates
+- Progressive image loading
+
+5. Performance Optimizations:
+- Code splitting
+- Lazy loading of routes
+- Image optimization
+- Memoization of expensive computations
+- Efficient re-rendering with React.memo
+- Service worker for offline support
+- API response caching
+
+6. Security Measures:
+- JWT token storage in HttpOnly cookies
+- XSS prevention
+- CSRF protection
+- Input sanitization
+- Secure HTTP headers
+- Rate limiting
+
+7. Testing Strategy:
+- Unit tests with Vitest
+- Component tests with React Testing Library
+- E2E tests with Cypress
+- API mocking with MSW
+- Test coverage reporting
+
+8. Development Workflow:
+- ESLint for code linting
+- Prettier for code formatting
+- Husky for pre-commit hooks
+- Conventional commits
+- Automated deployment pipeline
+
+This architecture provides a scalable, maintainable, and performant foundation for the EventXpert frontend application, with clear separation of concerns and modern best practices. 
